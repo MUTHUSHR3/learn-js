@@ -47,6 +47,8 @@ var hoist_b=8;
 
 /* Converting string to number */
 console.log("/* Type Conversion */");
+console.log("37"-7);
+console.log("37"+7);
 console.log((+"1.12")+(+"1.23"));
 
 /* Object Literals */
