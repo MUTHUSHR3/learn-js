@@ -83,3 +83,4 @@ console.log(typeof today);     // returns "object"
 console.log(typeof dontExist); // returns "undefined"
 console.log(typeof true); // returns "boolean"
 console.log(typeof null);  // returns "object"
+console.log(typeof undefined);
