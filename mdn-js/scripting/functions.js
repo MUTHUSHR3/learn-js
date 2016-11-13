@@ -14,6 +14,7 @@ var test_expression=function(){
 };
 
 /* Explore function */
+console.log('Function explore...');
 calling_function();
 function calling_function(){
 	var arg1=5;
@@ -21,7 +22,7 @@ function calling_function(){
 	explore_function(arg1,arg2);
 }
 function explore_function(a){
-	//debugger;
+	
 	console.log(arguments); //[5,"type"] 	
 }
 
@@ -34,7 +35,7 @@ console.log(test_default(5));  //10
 console.log(test_default(5,3)); //15
 
 /* Comparison operators */
-console.log("/* Default parameters */");
+console.log("/* Comparison operators */");
 var compare_a=3;
 var compare_b="test";
 /*console.log(compare_a=="3"); //true
@@ -46,7 +47,7 @@ console.log(0==undefined); // false
 console.log(null==undefined); // true*/
 var object1 = {"value":"key"}, object2={"value":"key"};
 var object3=object1; 
-console.log("Object Comparison:"+(object1 == object3));//false
+console.log("Object Comparison:"+(object1 === object2));//false
 
 /* Unary operators */
 console.log("/* delete */");
@@ -61,7 +62,7 @@ console.log(delete Employee.age);    // returns true
 
 // When trying to delete a property that does 
 // not exists, true is returned 
-console.log(Employee.name);
+console.log(Employee.name);  //undefined
 console.log(delete Employee.salary);
 
 var_a=5;
@@ -84,3 +85,18 @@ console.log(typeof dontExist); // returns "undefined"
 console.log(typeof true); // returns "boolean"
 console.log(typeof null);  // returns "object"
 console.log(typeof undefined);
+
+console.log("/* in */");
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+console.log(0 in trees);        // returns true
+console.log(3 in trees);        // returns true
+console.log(6 in trees);        // returns false
+console.log("bay" in trees);    // returns false
+
+
+console.clear();
+console.log("/* String objects */");
+var s1 = "2 + 2"; // Creates a string literal value
+var s2 = new String("2 + 2"); // Creates a String object
+console.log(typeof s1); // Returns the number 4
+console.log(typeof s2); // Returns the string "2 + 2"
