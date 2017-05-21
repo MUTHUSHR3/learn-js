@@ -1,10 +1,16 @@
 var heading=document.querySelector("h1");
 heading.textContent="Roger Federer";
 
-/* Using Local storage*/
+/* Adding elements dynamically */
+var spanElement=document.createElement('span');
+spanElement.textContent='Dynamic span...';
+spanElement.setAttribute('class','span-text');
+document.querySelector('body').appendChild(spanElement);
+
+/* Using Local storage */
 if(localStorage.getItem("player")){
 	heading.textContent=localStorage.getItem("player");	
-	console.log('From local storage');
+	console.log('From local storage...');
 }
 else{
 	heading.textContent="Roger Federer!!!";
@@ -25,3 +31,12 @@ if(true){
 	var d=55;
 }
 console.log("d defined? " + d);
+
+
+for(let i=0;i<5;i++){
+	setTimeout(function(){
+      alert(""+i);
+	},2000);   
+}
+
+console.log(""+parseInt("dfd"));
